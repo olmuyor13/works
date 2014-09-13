@@ -128,19 +128,24 @@ p { font-family: Arial; font-size: 14px; line-height: 20px; color: #AAA }
 .tab-content-item:after { clear: both; } .cf { *zoom: 1; }
 
 /* index styles */
-.index-content .part-1 { background: #2b3553; border-right: 1px solid white; padding-top: 20px; padding-bottom: 12px; }
-.index-content .part-2 { background: #878787; border-right: 1px solid white; padding-top: 20px; padding-bottom: 12px; }
+.index-content .part-1 { background: #2b3553; border-right: 1px solid white; padding-top: 20px; padding-bottom: 20px; position: relative; }
+.index-content .part-2 { background: #878787; border-right: 1px solid white; padding-top: 20px; padding-bottom: 20px; }
 .index-content .part-1 span, .index-content .part-2 span { display: block; color: #FFF; text-align: center; }
 .index-content .part-1 span.small, .index-content .part-2 span.small { font: bold 25px "HelveticaNeueCondensedBlack",Arial; }
 .index-content .part-1 span.big, .index-content .part-2 span.big { font: 65px "HelveticaNeueCondensedBlack",Arial; }
+.index-content .demanded-payment-btn { display: inline-block; border-radius: 5px; background: #FFF;
+    font: 18px 'HelveticaNeueBold',Arial; color: #373737; border: 1px solid #d0d0d0;
+    background: #FFF url(../panel/img/demanded-payment-btn.png) no-repeat; transition: background 0.2s linear;
+    background-position: 17px 11px; padding: 17px 17px 17px 61px; position: absolute; left:50%; bottom: -44px; margin-left: -108px; }
+.index-content .demanded-payment-btn:hover { background-color: #d53a3a; background-position: 17px -55px; color: #FFF; }
 
+.index-content .global-customDropDown { margin-right: 10px; }
+.pad-cont { padding: 25px 0; }
+.statistics-list-btn { display: block; color: #373737; font: 15px "HelveticaNeueBold",Arial;
+    border: 1px solid #d0d0d0; border-radius: 5px; float: left;
+    padding: 8.5px 5px 8.5px 42px; background: url(../panel/img/statistics-icon.png) 12px 8px no-repeat; }
 
-
-
-
-
-
-
+.birthdate-column { float: left; }
 
 
 
@@ -239,6 +244,27 @@ p { font-family: Arial; font-size: 14px; line-height: 20px; color: #AAA }
 .global-radiobutton input      { position: absolute; top: 0; left: 0; opacity: 0; cursor: pointer; filter:alpha(opacity=0); }
 .global-radiobutton a          { font: bold 14px/19px Arial; color: #717871; text-decoration: underline; margin-right: 3px; }
 .global-radiobutton a:hover    { color: #000; text-decoration: none; }
+
+/* ==========================================================================
+    Dropdown styles
+========================================================================== */
+
+.global-customDropDown { background: #FFFFFF; float: left; padding: 0; width: 100%; border: 1px solid #d0d0d0; border-radius: 5px;}
+.global-customDropDown.active { position: relative; }
+.global-customDropDown > label { color: #515151; cursor: pointer; display: block; font: 15px/36px 'HelveticaNeueRegular',Arial; width: 100%; float: left; text-align: center;}
+.global-customDropDown .arrow { background: url(../panel/img/dd-arrow.png) left center no-repeat; display: block; float: right; width: 19px; height: 35px;}
+.global-customDropDown .global-dropDownSpan { color: #515151; display: inline-block; float: left; font: 15px/35px 'HelveticaNeueRegular',Arial; height: 100%; width: 80%;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.global-customDropDown .hiddenDiv { background-color: #fff; height: 0; top: 0; overflow: hidden; position: absolute; width: 100%; z-index: 25; right: 0;}
+.global-customDropDown .hiddenDiv.active { border: 1px solid #d0d0d0; border-radius: 5px; height: auto; max-height: 130px; position: absolute; top: 100%; width: 100%; right: 0px; }
+.global-customDropDown .hiddenDiv ul > li { color: #464646; cursor: pointer; font: 12px/21px 'HelveticaNeueRegular',Arial; padding-left: 5px; padding-right: 5px; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis ; text-align: center;}
+.global-customDropDown .hiddenDiv ul > li:hover { color: #fff; background: #c9c9c9;}
+
+.type-1.global-customDropDown { width: 66px; }
+.type-1.global-customDropDown .global-dropDownSpan { width: 45px; }
+
+.type-2.global-customDropDown { width: 86px; }
+.type-2.global-customDropDown .global-dropDownSpan { width: 64px; }
+
 
 /* ==========================================================================
    Scrollbar styles
