@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Panel | Sitelerim</title>
+    <title>Panel | Anasayfa</title>
     <link rel="stylesheet" href="../css/bootstrap.css?v=0">
     <link rel="stylesheet" href="../css/main.css?v=0">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic' rel='stylesheet' type='text/css'>
@@ -105,20 +105,84 @@
     <div id="container" class="cf">
         <div id="contactContainer" class="cf">
             <div class="title cf">
-                <div class="container">
+                <div class="container" id="tabContainer">
                     <div class="row cf">
                         <div class="col-md-12">
                             <span class="img">
                                 <img class="img-responsive" src="img/my-sites-icon.png" alt=""/>
                             </span>
-                            <h3>SİTELERİM</h3>
+                            <h3 class="tabMainTitle">PANEL ANASAYFA</h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row cf">
+                    <div class="col-md-3">
 
+                        <div id="tabMenu">
+
+                            <div class="top-ribbon-bar">
+                                <a href="#" class="full-name">Kenan Yıldız</a>
+                                <span class="left-part"></span>
+                                <span class="right-part"></span>
+                            </div>
+                            <ul id="tabMenuList">
+                                <li>
+                                    <a data-tab-index="1" class="tab-menu-item" href="#">Panel Anasayfam</a>
+                                </li>
+                                <li>
+                                    <a data-tab-index="2" class="tab-menu-item" href="#">Kullanıcı Bilgileri</a>
+                                </li>
+                                <li>
+                                    <a data-tab-index="3" class="tab-menu-item" href="#">Sitelerim</a>
+                                </li>
+                                <li>
+                                    <a data-tab-index="4" class="tab-menu-item" href="#">Banka Bilgileri</a>
+                                </li>
+                                <li>
+                                    <a data-tab-index="5" class="tab-menu-item" href="#">İstatistikler</a>
+                                </li>
+                                <li>
+                                    <a data-tab-index="6" class="tab-menu-item" href="#">Ödeme Geçmişi</a>
+                                </li>
+                                <li>
+                                    <a data-tab-index="7" class="tab-menu-item" href="#">Yardım Merkezi</a>
+                                </li>
+                                <li>
+                                    <a data-tab-index="8" class="tab-menu-item" href="#">Çıkış Yap</a>
+                                </li>
+                            </ul>
+                            <div class="bottom-ribbon-bar">
+                                <a href="#" class="give-advertise-btn">Hemen Reklam Ver</a>
+                                <span class="left-part"></span>
+                                <span class="right-part"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-9">
+
+                        <div id="tabContent" class="cf">
+
+                            <div data-tab-index="1" class="tab-content-item index-content">
+
+                                <div class="part-1 col-md-6 col-sm-12">
+                                    <span class="total-avails small">Toplam Kazancınız</span>
+                                    <span class="total-avails-numeral big">1580.63 TL</span>
+                                </div>
+                                <div class="part-2 col-md-6 col-sm-12">
+                                    <span class="avails-for-today small">Toplam Kazancınız</span>
+                                    <span class="avails-numeral-for-today big">1580.63 TL</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,15 +199,16 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
-<script type="text/javascript" src="js/jquery.mcustomscrollbar.js"></script>
-<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="js/jquery.numbermask.js"></script>
-<script type="text/javascript" src="js/jquery.placeholder.js"></script>
-<script type="text/javascript" src="js/global-form-validator.js"></script>
-<script type="text/javascript" src="js/global-drop-down.js"></script>
-<script type="text/javascript" src="js/responsive-slider.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
-<script type="text/javascript" src="js/main.js?v=0"></script>
-</body>
+    <script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="../js/jquery.mcustomscrollbar.js"></script>
+    <script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../js/jquery.numbermask.js"></script>
+    <script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="../js/global-form-validator.js"></script>
+    <script type="text/javascript" src="../js/global-drop-down.js"></script>
+    <script type="text/javascript" src="../js/responsive-slider.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+    <script type="text/javascript" src="../js/main.js?v=0"></script>
+    <script type="text/javascript" src="../js/main.panel.js?v=0"></script>
+    </body>
 </html>
