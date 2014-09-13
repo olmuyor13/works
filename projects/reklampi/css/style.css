@@ -92,8 +92,8 @@
 #tabMenuList li a .wr { color: #373737; font: 14px/25px 'HelveticaNeueRegular', 'Ubuntu'; float: left; }
 #tabMenuList li a .img        { background-image: url(../panel/img/tab-menu-left-sprite.png); float: left; }
 #tabMenuList li a:hover,
-#tabMenuList li a.active      { background-color: #fff; }
-#tabMenuList li a:hover .wr   { color: #d53a3a; font-family: 'HelveticaNeueBold', 'Ubuntu'; }
+#tabMenuList li a.active      { background-color: #fff; transition: all 0.2s ease-in-out; }
+#tabMenuList li a:hover .wr   { color: #d53a3a; }
 #tabMenuList li a:hover .img  { transition: all 0.2s ease-in-out; }
 #tabMenuList li a.active .wr  { color: #d53a3a; font-family: 'HelveticaNeueBold', 'Ubuntu'; }
 #tabMenuList li a.home .img        { width: 23px; height: 23px; display: block; margin: 2px 15px 1px 0; background-position: left top; }
