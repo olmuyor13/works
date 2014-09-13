@@ -124,6 +124,8 @@ p { font-family: Arial; font-size: 14px; line-height: 20px; color: #AAA }
 
 
 /* PANEL CSS */
+#tabContent .tab-content-item { display: none; }
+
 .inner-canvas { padding-bottom: 66px; }
 #tabContent { padding-top: 34px; }
 .tab-content-item:before, .tab-content-item:after { content: " "; /* 1 */ display: table; /* 2 */ }
