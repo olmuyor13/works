@@ -142,7 +142,7 @@ p { font-family: Arial; font-size: 14px; line-height: 20px; color: #AAA }
 .index-content .global-customDropDown { margin-right: 5px; }
 .pad-cont { padding: 25px 0; }
 .statistics-list-btn { display: block; color: #373737; font: 15px "HelveticaNeueBold",Arial;
-    border: 1px solid #d0d0d0; border-radius: 5px; float: left; display: list-item;
+    border: 1px solid #d0d0d0; border-radius: 5px; float: left;
     padding: 8.5px 5px 8.5px 40px; background: url(../panel/img/statistics-icon.png) 12px 8px no-repeat;}
 .statistics-list-btn:hover { background: #373737 url(../panel/img/statistics-icon-hover.png) 12px 8px no-repeat;; color: white; }
 .birthdate-column { float: left; }
