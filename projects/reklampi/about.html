@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Reklam SOR | Yayıncı Ol</title>
+    <title>Reklam SOR | Hakkımızda</title>
     <link rel="stylesheet" href="css/bootstrap.css?v=0">
     <link rel="stylesheet" href="css/main.css?v=0">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic' rel='stylesheet' type='text/css'>
@@ -25,7 +25,7 @@
                             <span class="mail-img">
                                 <img class="img-responsive" src="img/header-email-icon.png" alt=""/>
                             </span>
-                            <a class="mail-wr" href="mailto:info@reklampi.com" target="_top">info@reklampi.com</a>
+                            <a class="mail-wr" href="mailto:info@reklampi.com" target="_top">info@reklamsor.com</a>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -91,9 +91,9 @@
                             </a>
                             <ul class="" id="dropdownMenu">
                                 <li><a href="index.html">Anasayfa</a></li>
-                                <li><a class="active" href="publisher.html">Yayıncı Ol</a></li>
+                                <li><a href="publisher.html">Yayıncı Ol</a></li>
                                 <li><a href="advertise.html">Reklam Ver</a></li>
-                                <li><a href="#">Hakkımızda</a></li>
+                                <li><a class="active" href="about.html">Hakkımızda</a></li>
                                 <li><a href="contact.html">İletişim</a></li>
                             </ul>
                         </div>
@@ -109,131 +109,34 @@
                     <div class="row cf">
                         <div class="col-md-12">
                             <span class="img">
-                                <img class="img-responsive" src="img/publisher-marker-icon.png" alt=""/>
+                                <img class="img-responsive" src="img/about-icon.png" alt=""/>
                             </span>
-                            <h3>YAYINCI OL</h3>
+                            <h3>HAKKIMIZDA</h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row cf">
-                    <div class="col-md-8">
-                        <form id="registerForm" method="POST" action="#" class="cf">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="usernameCtr">
-                                        <div class="row">
-                                            <label class="label">Kullanıcı Adı</label>
-                                        </div>
-                                        <div class="row">
-                                            <input tabindex="2" type="text" minlength="6" maxlength="40" class="req-letters req-min default-input" rel="usernameCtr" autocomplete="off"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="passwordCtr1">
-                                        <div class="row">
-                                            <label class="label">Şifre</label>
-                                        </div>
-                                        <div class="row">
-                                            <input tabindex="1" name="password" type="password" minlength="2" maxlength="50" class="req-min default-input" rel="passwordCtr1" autocomplete="off"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="passwordCtr2">
-                                        <div class="row">
-                                            <label class="label">Şifre Tekrar</label>
-                                        </div>
-                                        <div class="row">
-                                            <input tabindex="1" name="password" type="password" minlength="2" maxlength="50" class="req-min default-input" rel="passwordCtr2" autocomplete="off"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="e-mailCtr">
-                                        <div class="row">
-                                            <label class="label">E-Posta</label>
-                                        </div>
-                                        <div class="row">
-                                            <input tabindex="5" name="email" type="text" maxlength="50" class="req-email default-input" rel="e-mailCtr" autocomplete="off"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="nameCtr">
-                                        <div class="row">
-                                            <label class="label">Ad - Soyad</label>
-                                        </div>
-                                        <div class="row">
-                                            <input tabindex="1" name="name" type="text" minlength="6" maxlength="40" class="req-letters req-min default-input" rel="nameCtr" autocomplete="off"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div id="phoneNumberCtr">
-                                        <div class="row">
-                                            <label class="label">Telefon</label>
-                                        </div>
-                                        <div class="row">
-                                            <input tabindex="4" type="text" name="phone_number" minlength="10" class="req-numeric req-min medium-input" rel="phoneNumberCtr" maxlength="10" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb10">
-                                <div class="col-md-5">
-                                    <div id="cityCtr">
-                                        <div class="row">
-                                            <label class="label">Şehir</label>
-                                        </div>
-                                        <div class="row">
-                                            <select tabindex="8" rel="cityCtr" class="form-control req-letters req-min default-input">Şehir Seçin...
-                                                <option value="0">Adana</option>
-                                                <option value="1">Adıyaman</option>
-                                                <option value="2">Afyon</option>
-                                                <option value="3">Ağrı</option>
-                                                <option value="4">Amasya</option>
-                                                <option value="5">Ankara</option>
-                                                <option value="6">Antalya</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-2"></div>
-                                <div class="col-md-5">
-                                    <div id="securityCtr">
-                                        <div class="row">
-                                            <label class="label">Güvenlik Kodu</label>
-                                        </div>
-                                        <div class="row">
-                                            <input tabindex="9" name="subject" type="text" minlength="3" maxlength="40" class="req-letters req-min default-input" rel="securityCtr" value=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb20">
-                                <div class="col-md-12">
-                                    <img class="img-responsive pull-right mr-15" src="img/security.jpg" alt=""/>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <input tabindex="10" type="submit" id="registerFormSubmit" class="submit-btn animated" value="GÖNDER"/>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="col-md-8 about">
+                        <div class="row">
+                            <h3>HAKKIMIZDA</h3>
+                        </div>
+                        <div class="row m-t-25">
+                            <p>Mobil uygulama fikirleri ve geliştirilmesinde uzun yıllardır hizmet veren şirketimiz 2014 yılı itibariyle mobil reklam alanında faliyet göstermeye başlamış olup, reklam yayıncılarına en iyi kazancı sağlamayı kendine hedef belirlemiştir. Mobil işletim sistemlerinde (Android, iOS , Windows Phone) uzmanlaşmış kadromuz ile çıktığımız bu yolda hedefimiz, mobil reklam yayıncılarına hakettikleri dönüşüm oranını sağlamak ve uzun yıllar beraber çalışmaktır. Türkiye'de yeni sayılabilecek bir reklam türü olan "mobil reklam" konusunda siz yayıncılarımıza en iyi kazanç sistemini sağlamak için uzun uğraşlar ve yatırımlar sonucunda ortaya çıkartmış olduğumuz sistem tüm testlerden başarılı şekilde geçmiş olup, tester yayıncılarımızdan olumlu geri dönüşler almış bulunmaktayız. Amacımız; siz değerli yayıncılarımızın desteği ile Türkiye sınırları içerisinde kalmayıp uluslararası arenada mobil reklam konusunda iddalı bir şirket olmaktır. </p>
+                        </div>
+                        <div class="row m-t-60">
+                            <h3>MiSYONUMUZ</h3>
+                        </div>
+                        <div class="row m-t-25">
+                            <p>Türkiye'deki mobil reklam pazarına yeni bir soluk getirerek, yayıncı iş ortaklarımıza mobil ziyaretçilerinden olabilecek en yüksek geri dönüşümü kazandırmak ve bunu sürekli olarak uzun yıllar boyunca devam ettirmektir.</p>
+                        </div>
+                        <div class="row m-t-60">
+                            <h3>ViZYONUMUZ</h3>
+                        </div>
+                        <div class="row m-t-25">
+                            <p>Türkiye'deki mobil reklam pazarına getirdiğimiz yeni reklam anlayışı ile piyasanın amiral gemisi olmak, elde edeceğimiz deneyim ve kazanımlarla uluslararası arenada Türk Mobil Reklam Sektörünün bayraktarlığını yapmak.</p>
+                        </div>
                     </div>
                     <div class="col-md-4">
                         <div class="row">
