@@ -170,8 +170,9 @@ p { font-family: Arial; font-size: 14px; line-height: 20px; color: #AAA }
 .my-sites-content .table.-full { margin-top: 15px; }
 .add-new-site-btn {  border: 1px solid #d0d0d0; border-radius: 5px;   padding: 8px 14px 8px 38px;
     background: url(../panel/img/add-new-site-icon.png) 10px 8px no-repeat; display: inline-block;
-    font: 15px  "HelveticaNeueBold",Arial; color: #373737; }
-.add-new-site-btn:hover { color: #FFF; background: #000; background-position: 10px 20px; }
+    font: 15px  "HelveticaNeueBold",Arial; color: #373737;
+}
+.add-new-site-btn:hover { color: #FFF; background: black url(../panel/img/add-new-site-icon.png) 10px -37px no-repeat; }
 
 
 
@@ -206,6 +207,9 @@ td.only-date b { font: 19px 'HelveticaNeueBold',Arial; }
 
     .table.-full { margin-top: 15px }
 
+
+    .my-sites-content { text-align: center; }
+    .my-sites-content .add-new-site-btn { float: none; }
 }
 
 
