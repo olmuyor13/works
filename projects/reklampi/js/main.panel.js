@@ -38,7 +38,15 @@ var PNL = {
     Tab: {
 
         init: function(){
+
+            $('#tabMenu .tab-menu-item:first').addClass('active');
             $('#tabMenu .tab-menu-item').on('click',PNL.Tab.open);
+
+//            $('#tabContent .tab-content-item:first').addClass('active');
+//            $('#tabContent .tab-content-item:first').css('display','block');
+
+            $('.tab-content-item.statistics-content').fadeIn();
+
         },
 
         open: function(){
@@ -50,6 +58,7 @@ var PNL = {
 
             $('#tabContentTitleImage').attr('src',source);
             $('#tabContentTitle').html(title);
+            $('#tabContentTitle').trUpperCase();
 
             th.addClass('active');
             th.fadeIn();
