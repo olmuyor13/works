@@ -97,6 +97,7 @@
 #tabMenuList li a:hover .img  { transition: all 0.2s ease-in-out; }
 #tabMenuList li a.active .wr  { color: #d53a3a; font-family: 'HelveticaNeueBold', 'Ubuntu'; }
 #tabMenuList li a.home .img        { width: 23px; height: 23px; display: block; margin: 2px 15px 1px 0; background-position: left top; }
+#tabMenuList li a.home.active .wr  { font-size: 13px; }
 #tabMenuList li a.home.active .img,
 #tabMenuList li a.home:hover .img  { background-position: -27px top; }
 #tabMenuList li a.user .img        { width: 26px; height: 26px; display: block; margin: 1px 12px 2px 0; background-position: left -25px; }
