@@ -148,18 +148,26 @@ p { font-family: Arial; font-size: 14px; line-height: 20px; color: #AAA }
 .index-content .pad-cont { padding: 25px 0; }
 .statistics-list-btn { display: block; color: #373737; font: 15px "HelveticaNeueBold",Arial;
     border: 1px solid #d0d0d0; border-radius: 5px; float: left;
-    padding: 8.5px 5px 8.5px 40px; background: url(../panel/img/statistics-icon.png) 12px 8px no-repeat;}
+    padding: 8.5px 5px 8.5px 40px; background: url(../panel/img/statistics-icon.png) 72px 8px no-repeat; width: 42.5%; text-align: center;}
 .index-content .statistics-list-btn:hover { background: #373737 url(../panel/img/statistics-icon-hover.png) 12px 8px no-repeat;; color: white; }
 .statistics-column { float: left; }
 
+/* statistics styles */
+.statistics-content .global-customDropDown { margin-right: 10px; }
+
+
+.left-float { float: left; }
+.right-float { float: right; }
 
 @media (max-width: 980px) {
 
     /* index-content */
     .dd-wrap { text-align: center; }
-    .dd-wrap .birthdate-column { float: none; display: inline-block;}
-    .statistics-list-btn { float: none; display: block; width: 191px; margin: 6px auto 0;}
+    .dd-wrap .statistics-column { float: none; display: inline-block;}
+    .statistics-list-btn { float: none; display: block; width: 182px; margin: 4px auto 9px;}
     .no-mar { margin-right: 0 !important; }
+
+    .index-content .statistics-list-btn { width: 191px; margin: 6px auto 0; }
     .index-content .part-1 { padding-bottom: 13px; }
     .index-content .demanded-payment-btn { position: relative; bottom: auto; left: auto; margin-left: auto; }
 
