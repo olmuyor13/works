@@ -45,6 +45,11 @@ var PNL = {
 
             var th = $(this);
             var index = th.attr('data-tab-index');
+            var title = th.attr('data-content-title');
+            var source = th.attr('data-title-img');
+
+            $('#tabContentTitleImage').attr('src',source);
+            $('#tabContentTitle').html(title);
 
             th.addClass('active');
             th.fadeIn();
