@@ -1,0 +1,279 @@
+/* ==========================================================================
+   Another stylesheet import
+   ========================================================================== */
+
+@import 'normalize.css';
+@import 'animation.css';
+@import 'global-scrollbar.css';
+@import '../fonts/fonts.css';
+@import 'animation.css';
+@import 'slider.css';
+@import 'style.css';
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults - App Specific
+   ========================================================================== */
+
+html, body, button, input, select, textarea { color: #999; }
+body { font-family: 'Ubuntu', Arial; }
+html, body { font-size: 1em; line-height: 1.4; height: 100%; }
+body > #wrapper { width: 100%; height: 100%; position: relative; }
+:-ms-input-placeholder, :-moz-placeholder, ::-moz-placeholder, ::-webkit-input-placeholder  { color: #baaeaf; }
+h1, h2, h3, h4, h5, h6 { font-family: Arial; color: #000 }
+h1 { font-size: 36px } h2 { font-size: 30px } h3 { font-size: 24px } h4 { font-size: 18px } h5 { font-size: 14px } h6 { font-size: 12px }
+p { font-family: Arial; font-size: 14px; line-height: 20px; color: #AAA }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.sign-in-popup { position: absolute; right: 0; top: 51px; background: #e5e5e5; width: 280px; z-index: 3; }
+.sign-in-popup .gray-area { display: block; width: 79px; height: 10px; background: #e5e5e5; position: absolute; right: 0; top: -10px }
+.sign-in-popup .inner { margin: 20px auto; width: 255px; }
+.sign-in-popup .form-row { margin-bottom: 15px; float: left; width: 100%; }
+.sign-in-popup .form-row .label { width: 41px; display: block; margin-right: 9px;
+    text-align: right; color: #828282; font: 14px/24px 'milo_ottext', 'Ubuntu'; float: left; }
+.sign-in-popup .form-row input.default-input { width: 195px; height: 24px; padding: 0 5px; float: left; }
+.sign-in-popup a.forget-my-password { float: left; display: block;
+    font: bold 12px/27px 'milo_ottext', 'Ubuntu'; color: #d53a3a; text-decoration: underline; }
+.sign-in-popup a.forget-my-password:hover { text-decoration: none; }
+.sign-in-popup #signInFormSubmit { float: right; color: #fff; border-radius: 10px; padding: 7px 22px;
+    font: bold 13px/13px 'milo_ottext', 'Ubuntu'; background: #3c3c3c;  }
+
+
+
+
+/* INDEX - promoArea */
+#promoArea { max-width: 1005px; margin: 100px auto; background: #FFF; }
+#promoArea .promo-item-title { font: 19px 'milo_otextrabold', 'Ubuntu'; color: #2d2d2d; margin: 30px auto; text-align: center; display: block; }
+#promoArea .promo-item-img { display: block; text-align: center; margin: 0 auto; }
+#promoArea .promo-text { font: 16px/20px 'milo_ottext', 'Ubuntu'; color: #2d2d2d; text-align: center; }
+.promo-item { margin-bottom: 35px; }
+
+/*DASHBOARD AREA*/
+#dashboardArea { width: 100%; min-height: 359px; margin-bottom: 70px; background: url(../img/dashboard-bg.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+#dashboardArea #dashboardContent { max-width: 1005px; margin: 0 auto 0; }
+#dashboardArea .db-circle { border-radius: 50%; border: 3px solid white; width: 180px; height: 180px; display: table; margin: 0 auto 22px;}
+#dashboardArea .db-title { font: 25px 'trebuchet_msbold', Arial; text-align: center; color: white; display: block; }
+#dashboardArea .centerize-inner { text-align: center; vertical-align: middle; display: table-cell;}
+
+#dashboardArea .db-circle span { font-family: 'trebuchet_msregular',Arial; color: white; display: block;  }
+
+#dashboardArea .active-site-no { font-size: 57px; }
+#dashboardArea .active-site-icon { background: url(../img/aktif-site-icon.png); width: 36px; height: 30px; margin: 0 auto; }
+
+#dashboardArea .singular-representation-no { font-size: 30px; }
+#dashboardArea .singular-representation-icon { background: url(../img/tekil-gosterim-icon.png); width: 27px; height: 27px; margin: 15px auto 0; }
+
+#dashboardArea .daily-gain-no { font-size: 30px; }
+#dashboardArea .daily-gain-icon { background: url(../img/gunluk-kazan-icon.png); width: 44px; height: 37px;  margin: 9px auto 0; }
+
+#dashboardArea .member-no { font-size: 42px; }
+#dashboardArea .member-icon { background: url(../img/uye-sayisi-icon.png); width: 31px; height: 30px; margin: 9px auto 0; }
+
+#dashboardArea .dashboard-item { margin: 60px auto; }
+
+
+/*ADVERSITING AREA*/
+#adversitingArea { width: 100%; background: #FFF; margin-bottom: 75px; overflow: hidden; }
+#adversitingArea #adversitingContent {  max-width: 1005px; margin: 0 auto 0;   position: relative;}
+#adversitingArea .adv-title { font: 42px 'milo_otbold', "Myriad Pro"; color: #d53a3a; }
+#adversitingArea .adv-subtitle { font: 30px 'milootregular', "Myriad Pro"; color: #d53a3a; margin-top: -10px; margin-bottom: 50px; }
+#adversitingArea .head-text { font: bold 18px "Myriad Pro"; color: #535353; margin-bottom: 35px; }
+#adversitingArea .default-text { font: 18px "Myriad Pro"; color: #535353; }
+
+#adversitingArea .adv-btn {
+    margin-top: 70px;
+    display: inline-block;
+    color: #535353;
+    font: 18px 'Myriad Pro',Arial;
+    padding: 13px 25px 10px 25px;
+    border: 2px solid #535353;
+    border-radius: 8px;
+    transition: all 0.1s linear;
+}
+
+#adversitingArea .adv-btn:hover { border: 2px solid transparent; text-decoration: underline; }
+#adversitingArea .adv-visual { position: absolute; right:0px; bottom: 0; }
+
+
+/* FOOTER */
+#footerContainer { background: #d9d9d9; width: 100%; min-height: 60px; }
+#footerContent { max-width: 1005px; margin: 0 auto; margin-top: 22px; }
+#footerContent .cp { font: 18px 'milo_ottext', "Myriad Pro"; color: #636363; float: left; display: block; }
+#footerContent .ft-menu { float: right; }
+#footerContent .ft-menu a { float: left; display: block; font: 14px 'milo_ottext', "Myriad Pro"; color: #636363; margin-left: 30px;
+    transition: all 0.2s linear;
+}
+#footerContent .ft-menu a:hover { text-decoration: underline; }
+
+/* CUSTOM MEDIA SCREEN */
+
+@media (max-width: 1004px) {
+    #adversitingArea {text-align: center}
+}
+
+@media (max-width: 767px) {
+
+    #dashboardArea .dashboard-item { margin: 30px auto; }
+
+    /*Footer*/
+    #footerContent { margin: 0 auto; }
+    #footerContent .ft-menu { float: none; }
+    #footerContent .ft-menu a { text-transform: uppercase; float: none; margin-left: 0; padding: 15px 0 13px; font-size: 18px;text-align: center; }
+    #footerContent .ft-menu a:hover { background: white; text-decoration: none;  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Modals styles
+   ========================================================================== */
+
+#mainModal { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../img/modal-bg.png); z-index: 1000; }
+#mainModal .close-btn { width: 30px; height: 31px; display: block; position: absolute; top: -15px; right: -15px; background: url(../i/close-btn.png) left top; z-index: 2;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#mainModal .close-btn:hover {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+#mainModal .modal       { position: absolute; background: white; top: 50%; width: 530px; height: 420px; padding: 30px 20px; left: 50%; margin: -285px 0 0 -240px; }
+#mainModal .modal h3    { margin-bottom: 15px; text-align: center; }
+#mainModal .modal li    { margin-bottom: 10px; font: 14px/20px Arial; }
+#mainModal .modal li b  { font-weight: bold; }
+#mainModal .scroll-this { height: 380px; }
+
+/* ==========================================================================
+   Form styles
+   ========================================================================== */
+
+/* Past here form style. */
+
+
+
+
+
+.form-area input:focus, .form-area textarea:focus, .form-area .global-customDropDown:focus {
+    border-color: rgba(82,168,236,.8);
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: 0 0 8px rgba(82,168,236,.6);
+    -moz-box-shadow: 0 0 8px rgba(82,168,236,.6);
+    -ms-box-shadow: 0 0 8px rgba(82,168,236,.6);
+    -o-box-shadow: 0 0 8px rgba(82,168,236,.6);
+    box-shadow: 0 0 8px rgba(82,168,236,.6);
+}
+
+/* Error styles */
+.error-input input, .error-input textarea, .error-input .global-customDropDown {
+    border-color: #ff5d4e !important;
+    outline: 0;
+    outline: thin dotted \9;
+    -webkit-box-shadow: 0 0 8px rgba(255,93,78,.6);
+    -moz-box-shadow: 0 0 8px rgba(255,93,78,.6);
+    -ms-box-shadow: 0 0 8px rgba(255,93,78,.6);
+    -o-box-shadow: 0 0 8px rgba(255,93,78,.6);
+    box-shadow: 0 0 8px rgba(255,93,78,.6);
+}
+.error-input a.termofuse    { color: #ff5d4e !important; }
+.shake.submit-btn           { background: #ff5d4e !important; }
+
+
+/* ==========================================================================
+   Checkbox styles
+   ========================================================================== */
+
+.global-checkbox               { display: block; padding-left: 28px; position: relative; margin-bottom: 10px; cursor: pointer; font: 14px/19px Arial; color: #717871; }
+.global-checkbox .ck           { display: block; width: 18px; height: 18px; background: url(../i/checkbox-spr.png); position: absolute; top: 1px; left: 0; }
+.global-checkbox .ck.active    { background-position: left bottom !important; }
+.global-checkbox input         { position: absolute; top: 0; left: 0; opacity: 0; cursor: pointer; filter:alpha(opacity=0); }
+.global-checkbox a             { font: bold 14px/19px Arial; color: #717871; text-decoration: underline; margin-right: 3px; }
+.global-checkbox a:hover       { color: #000; text-decoration: none; }
+
+/* ==========================================================================
+   Radiobutton styles
+   ========================================================================== */
+
+.global-radiobutton            { display: block; padding-left: 26px; position: relative; margin-bottom: 10px; cursor: pointer; font: 14px/19px Arial; color: #717871; }
+.global-radiobutton .ck        { display: block; width: 13px; height: 13px; background: url(../i/radiobutton-spr.png); position: absolute; top: 3px; left: 0; }
+.global-radiobutton .ck.active { background-position: left bottom !important; }
+.global-radiobutton input      { position: absolute; top: 0; left: 0; opacity: 0; cursor: pointer; filter:alpha(opacity=0); }
+.global-radiobutton a          { font: bold 14px/19px Arial; color: #717871; text-decoration: underline; margin-right: 3px; }
+.global-radiobutton a:hover    { color: #000; text-decoration: none; }
+
+/* ==========================================================================
+   Scrollbar styles
+   ========================================================================== */
+
+.mCustomScrollBox .mCSB_scrollTools { width: 8px !important; }
+.mCSB_scrollTools .mCSB_draggerRail { background: #ccc !important; width: 8px !important; border-radius: 0; }
+.mCSB_scrollTools .mCSB_dragger     { background: #4c4640 !important; width:8px !important; height: 33% !important; border-radius: 0; }
+.mCSB_container                     { width: auto !important; margin-right: 25px !important; overflow: hidden !important; }
+
+/* For Dropdown */
+.hiddenDiv .mCustomScrollBox .mCSB_scrollTools  { width: 8px !important; }
+.hiddenDiv .mCSB_scrollTools .mCSB_draggerRail  { background: #ccc !important; width: 8px !important; border-radius: 0; }
+.hiddenDiv .mCSB_scrollTools .mCSB_dragger      { background: #4c4640 !important; width: 8px !important; border-radius: 0; }
+.hiddenDiv .mCSB_container                      { width: auto !important; margin-right: 8px !important; overflow: hidden !important; }
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+    filter: alpha(opacity=65);
+    -khtml-opacity: 0.65;
+    -moz-opacity: 0.65;
+    opacity: 0.65;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.disabled:hover { cursor: not-allowed }
+
+.text-left      { text-align: left; }
+.text-right     { text-align: right; }
+.text-center    { text-align: center; }
+.text-justify   { text-align: justify; }
+
+.center-block { display: block; margin-left: auto; margin-right: auto; }
+
+.pull-left { float: left !important; }
+.pull-right { float: right !important; }
+
+.noMR           { margin-right: 0 !important }
+.noBR           { border-right: 0 !important }
+.invisible      { visibility: hidden; }
+.show           { display: block !important; }
+.hidden         { display: none !important; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.cf:before, .cf:after { content: " "; /* 1 */ display: table; /* 2 */ } .cf:after { clear: both; } .cf { *zoom: 1; }

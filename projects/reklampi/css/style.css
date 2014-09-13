@@ -1,0 +1,68 @@
+
+#header .top-bar        { width: 100%; background-color: #100c01; }
+#header .tel-content    { float: left; width: 160px; }
+#header .tel-content .tel-img   { float: left; width: 14px; height: 23px; margin: 13px 12px 14px 0; }
+#header .tel-content .tel-wr    { float: left; margin: 13px 0 14px 0; display: block; color: #fff; font: 20px/23px 'milo_ottext', 'Ubuntu'; }
+#header .mail-content           { float: left; width: 190px; margin-left: 15px; }
+#header .mail-content .mail-img { float: left; width: 20px; height: 16px; margin: 16px 12px 19px 0; }
+#header .mail-content .mail-wr  { float: left; margin: 13px 0 14px 0; display: block; color: #fff; font: 18px/23px 'milo_ottext', 'Ubuntu'; }
+#header .member-content         { float: right; width: 205px; height: 26px; margin-top: 12px; }
+#header .member-content .sign_up { float: left; width: 90px; }
+#header .member-content .sign_in { float: right; width: 95px; }
+#header .member-content .write   { float: left; display: block; color: #fff; font: 14px/23px 'milo_ottext', 'Ubuntu'; }
+#header .member-content .img     { float: left; display: block; color: #fff; font: 14px/23px 'milo_ottext', 'Ubuntu'; margin-left: 10px; }
+
+#header .bottom-bar     { width: 100%; background-color: #ffffff; }
+#header .logo-content   { width: 284px; height: 92px; float: left; margin: 22px 10px 18px 5px; position: relative; }
+#header .logo-content .logo { width: 284px; height: 92px; position: absolute; top: 0; left: 0; z-index: 2; }
+#header .logo-content .global-logo-shadow { position: absolute; top: 3px; right: -91px; z-index: 1; }
+#header .menu { float: right; }
+#header .menu ul { float: left; margin-top: 40px; }
+#header .menu ul li { float: left; }
+#header .menu ul li a { float: left; padding: 4px 8px; margin: 0 10px; color: #2d2d2d; font: 18px/23px 'milo_ottext', 'Ubuntu'; }
+#header .menu ul li a:hover,
+#header .menu ul li a.active { background-color: #d53a3a; border-radius: 5px; color: #fff; }
+
+@media (max-width: 1004px) {
+    #header .menu    { width: 100%; }
+    #header .menu .menu-icon { float: right; margin-top: 40px; }
+    #header .menu ul { display: none; position: absolute; top: 132px; width: 300%; right: 0; background-color: #fff; margin-top: 0; z-index: 2; border-top: 1px solid #d53a3a;}
+    #header .menu ul.active { display: block; }
+    #header .menu ul li { width: 100%; border-bottom: 1px solid #d53a3a; padding: 5px 0; }
+    #header .menu ul li a { width: 98%; }
+}
+
+
+#contactContainer { background-color: #fff; }
+#contactContainer .title { border-top: 1px solid #d53a3a; border-bottom: 1px solid #d53a3a; }
+#contactContainer .title .img { margin: 16px 12px 16px 0; float: left; }
+#contactContainer .title h3   { float: left; margin-top: 22px; color: #494949; font: 22px 'Ubuntu'; }
+
+#contactContainer #registerForm { margin: 60px 0; padding: 30px; }
+#registerForm .row .col-md-12       { margin-bottom: 15px; }
+#registerForm .row .col-md-12 .row  { margin-bottom: 5px; }
+#registerForm .row label    { color: #494949; font: 18px 'Ubuntu'; margin-bottom: 5px; }
+#registerForm .row input    { border: 1px solid #d0d0d0; border-radius: 5px; padding: 4px 6px; width: 100%; }
+#registerForm .row textarea { height: auto; min-height: 120px; border: 1px solid #d0d0d0; border-radius: 5px; padding: 4px 6px; width: 100%; }
+#registerForm .row input.submit-btn { background-color: #fff; margin-left: -15px; margin-top: 15px; }
+#registerForm .row input.submit-btn.shake { color: #fff; }
+
+#contactContainer .contact-content { margin: 60px 0 0 0; padding: 30px; float: left; }
+#contactContainer .contact-content h4 { color: #494949; font: 22px 'Ubuntu'; margin-bottom: 20px; }
+#contactContainer .contact-content p  { color: #494949; font: 15px 'Ubuntu'; margin-bottom: 40px; }
+#contactContainer .contact-content .adress      { float: left; }
+#contactContainer .contact-content .adress .img { float: left; width: 14%; }
+#contactContainer .contact-content .adress p    { float: left; font-size: 14px; width: 86%; margin-bottom: 30px; }
+#contactContainer .contact-content .adress p a  { float: left; color: #494949; font: 15px 'Ubuntu'; }
+
+.map { float: left; width: 100%; height: 150px; }
+
+.posr { position: relative; }
+#siteCtr .posr span { position: absolute; top: 2px; left: 8px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  font-size: 16px; }
+#siteCtr .posr input { text-indent: 53px; }
+
+#securityCtr .row input { padding: 6px; }
+.mb10 { margin-bottom: 10px; }
+.mr-15 { margin-right: -15px; }
+
+

@@ -1,0 +1,19 @@
+/* ANIMATIONS */
+
+/* This example for only your animations syntax see. Don't forget to add the prefix. -moz etc.. */
+.item-wrap .next-arrow {
+    -webkit-animation: moveArrow 1.5s linear infinite;
+    -moz-animation: moveArrow 1.5s linear infinite;
+    -ms-animation: moveArrow 1.5s linear infinite;
+    -o-animation: moveArrow 1.5s linear infinite;
+    animation: moveArrow 1.5s linear infinite;
+}
+
+@-webkit-keyframes moveArrow {
+    0%   { top: -35px; }
+    25%  { top: -45px; }
+    50%  { top: -55px; }
+    75%  { top: -45px; }
+    100% { top: -35px; }
+}
+

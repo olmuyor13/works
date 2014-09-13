@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if IE 7]><html class="ie7"><![endif]-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Your Project Title</title>
+        <link rel="stylesheet" href="css/main.css?v=0">
+        <style type="text/css">
+
+             /* Form Type 1 */
+            .center                            { text-align: center; margin: 30px 0; }
+            .form-area                         { width: 500px; margin: 0 auto 0 }
+            .form-area .row                    { margin-bottom: 12px; float: left; clear: both; width: 100%; position: relative; }
+            .form-area .row > div              { width: 100%; float: left; }
+            .form-area .row > div > div        { float: left; }
+            .form-area .row .termofuse-box     { width: 355px; }
+            .form-area label.label     { width: 125px; text-align: right; margin-right: 20px; color: black; font: 16px/29px Arial; display: block; float: left; }
+            .form-area .default-input, .form-area .medium-input, .form-area .textarea {
+                display: block; float: left; padding: 3px 5px; border: 2px solid #4c4640; color: #515151; font: 15px Arial;
+            }
+            .form-area .default-input  { width: 341px; height: 19px; }
+            .form-area .medium-input   { width: 277px; height: 19px; }
+            .form-area .small-input    { width: 50px;  height: 19px; }
+            .form-area .textarea       { width: 341px; height: 49px; }
+            .form-area .submit-btn     { background: #4c4640; padding: 8px; font: 14px Arial; float: left; color: white; display: block; transition: all 0.5s ease-in-out; }
+
+            /* Tooltip */
+            .form-area .row .error-input .warning-tooltip { display: block !important; }
+            .form-area .row .warning-tooltip { display: none; min-width: 210px; position: absolute; top: 0; right: -232px; z-index: 3; background: #ff5d4e; padding: 3.5px 7px; }
+            .form-area .row .warning-tooltip i { display: block; width: 8px; height: 16px; background: url(i/error-arrow.png); position: absolute; left: -4px; top: 50%; margin-top: -8px; }
+            .form-area .row .warning-tooltip span { color: #FFF; font: 12px Arial; }
+
+            /* ==========================================================================
+               Dropdown styles
+               ========================================================================== */
+
+            .medium-dd.global-customDropDown { width: 163.5px; }
+            .small-dd.global-customDropDown { width: 50px; }
+
+            .global-customDropDown { background: #FFFFFF; float: left; height: 19px; padding: 3px 5px; position: static; width: 341px; border: 2px solid #4c4640; }
+            .global-customDropDown.active { position: relative; }
+            .global-customDropDown > label { color: #515151; cursor: pointer; display: block; font: 15px Arial; height: 100%; width: 100%; float: left; }
+            .global-customDropDown .arrow { background: url(img/dd-arrow.png) 0 5px no-repeat; display: block; float: right; height: 100%; width: 12px; }
+            .global-customDropDown.active .arrow { background-position: 2px -26px; }
+            .global-customDropDown .global-dropDownSpan { color: #515151; display: inline-block; float: left; font: 15px/20px Arial; height: 100%; width: 324px;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis  }
+            .global-customDropDown .hiddenDiv { background-color: #fff; height: 0; top: 26px; overflow: hidden; position: absolute; width: 100%; z-index: 25; }
+            .global-customDropDown .hiddenDiv.active { height: auto; max-height: 130px; position: absolute; top: 100%; width: 100%; border: 2px solid #4c4640; /* border 2px olduğu için left: -2px */ left: -2px; }
+            .global-customDropDown .hiddenDiv ul > li { color: #717871; cursor: pointer; font: 14px/25px Arial; padding-left: 10px; width: 333px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+            .global-customDropDown .hiddenDiv ul > li:hover { color: #4c4640; }
+
+            /* For Address */
+            .medium-dd .global-dropDownSpan  { width: 146px; height: 19px; }
+            .medium-dd .hiddenDiv ul > li { width: 155px }
+
+            /* For Phone Code */
+            .small-dd .global-dropDownSpan  { width: 33px; height: 19px; }
+            .small-dd .hiddenDiv ul > li { width: 42px }
+
+
+        </style>
+    </head>
+    <body class="form">
+
+        <h1 class="center">global Template - Form Type 3</h1>
+
+        <div class="form-area">
+
+            <form id="registerForm" method="POST" action="#" class="cf">
+
+                <div class="row">
+
+                    <div id="nameCtr">
+                        <label class="label">Ad:</label>
+                        <input tabindex="1" name="name" type="text" minlength="3" maxlength="40" class="req-letters req-min default-input" rel="nameCtr" autocomplete="off"/>
+                        <div class="warning-tooltip">
+                            <i class="small-arrow"></i>
+                            <span>Lütfen adınızı giriniz!</span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div id="surnameCtr">
+                        <label class="label">Soyad:</label>
+                        <input tabindex="2" name="last_name" type="text" minlength="2" maxlength="50" class="req-letters req-min default-input" rel="surnameCtr" autocomplete="off"/>
+                        <div class="warning-tooltip">
+                            <i class="small-arrow"></i>
+                            <span>Lütfen soyadınızı giriniz!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div id="emailCtr">
+                        <label class="label">E-Posta:</label>
+                        <input tabindex="3" name="email" type="text" maxlength="50" class="req-email default-input" rel="emailCtr" autocomplete="off"/>
+                        <div class="warning-tooltip">
+                            <i class="small-arrow"></i>
+                            <span>Lütfen e-posta adresinizi giriniz!</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div id="genderCtr" class="noMR">
+                        <label class="label">Cinsiyet:</label>
+                        <div tabindex="4" class="global-customDropDown">
+                            <label class="global-dropDownLabel">
+                                <span class="global-dropDownSpan">Seçiniz</span>
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="hiddenDiv hidden">
+                                <ul>
+                                    <li data-id="1">Erkek</li>
+                                    <li data-id="2">Bayan</li>
+                                </ul>
+                            </div>
+                            <input type="hidden" name="gender" class="req-string" rel="genderCtr" value="">
+                        </div>
+                        <div class="warning-tooltip">
+                            <i class="small-arrow"></i>
+                            <span>Lütfen cinsiyetinizi seçiniz!!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div id="phoneCtr" class="">
+                        <label class="label">Telefon:</label>
+                        <div id="phoneCodeCtr">
+                            <div tabindex="5" class="global-customDropDown  small-dd">
+                                <label class="global-dropDownLabel">
+                                    <span class="global-dropDownSpan">Seç</span>
+                                    <span class="arrow"></span>
+                                </label>
+                                <div class="hiddenDiv hidden">
+                                    <ul>
+                                        <li data-id="212">212</li>
+                                        <li data-id="216">216</li>
+                                        <li data-id="222">222</li>
+                                        <li data-id="224">224</li>
+                                        <li data-id="226">226</li>
+                                        <li data-id="228">228</li>
+                                        <li data-id="232">232</li>
+                                        <li data-id="236">236</li>
+                                        <li data-id="242">242</li>
+                                        <li data-id="246">246</li>
+                                        <li data-id="248">248</li>
+                                        <li data-id="252">252</li>
+                                        <li data-id="256">256</li>
+                                        <li data-id="258">258</li>
+                                        <li data-id="262">262</li>
+                                        <li data-id="264">264</li>
+                                        <li data-id="266">266</li>
+                                        <li data-id="272">272</li>
+                                        <li data-id="274">274</li>
+                                        <li data-id="276">276</li>
+                                        <li data-id="282">282</li>
+                                        <li data-id="284">284</li>
+                                        <li data-id="286">286</li>
+                                        <li data-id="288">288</li>
+                                        <li data-id="312">312</li>
+                                        <li data-id="318">318</li>
+                                        <li data-id="322">322</li>
+                                        <li data-id="324">324</li>
+                                        <li data-id="326">326</li>
+                                        <li data-id="328">328</li>
+                                        <li data-id="332">332</li>
+                                        <li data-id="338">338</li>
+                                        <li data-id="342">342</li>
+                                        <li data-id="344">344</li>
+                                        <li data-id="346">346</li>
+                                        <li data-id="348">348</li>
+                                        <li data-id="352">352</li>
+                                        <li data-id="354">354</li>
+                                        <li data-id="356">356</li>
+                                        <li data-id="358">358</li>
+                                        <li data-id="362">362</li>
+                                        <li data-id="364">364</li>
+                                        <li data-id="366">366</li>
+                                        <li data-id="368">368</li>
+                                        <li data-id="370">370</li>
+                                        <li data-id="372">372</li>
+                                        <li data-id="374">374</li>
+                                        <li data-id="376">376</li>
+                                        <li data-id="378">378</li>
+                                        <li data-id="380">380</li>
+                                        <li data-id="382">382</li>
+                                        <li data-id="384">384</li>
+                                        <li data-id="386">386</li>
+                                        <li data-id="388">388</li>
+                                        <li data-id="412">412</li>
+                                        <li data-id="414">414</li>
+                                        <li data-id="416">416</li>
+                                        <li data-id="422">422</li>
+                                        <li data-id="424">424</li>
+                                        <li data-id="426">426</li>
+                                        <li data-id="428">428</li>
+                                        <li data-id="432">432</li>
+                                        <li data-id="434">434</li>
+                                        <li data-id="436">436</li>
+                                        <li data-id="438">438</li>
+                                        <li data-id="442">442</li>
+                                        <li data-id="446">446</li>
+                                        <li data-id="452">452</li>
+                                        <li data-id="454">454</li>
+                                        <li data-id="456">456</li>
+                                        <li data-id="458">458</li>
+                                        <li data-id="462">462</li>
+                                        <li data-id="464">464</li>
+                                        <li data-id="466">466</li>
+                                        <li data-id="472">472</li>
+                                        <li data-id="474">474</li>
+                                        <li data-id="476">476</li>
+                                        <li data-id="478">478</li>
+                                        <li data-id="482">482</li>
+                                        <li data-id="484">484</li>
+                                        <li data-id="486">486</li>
+                                        <li data-id="488">488</li>
+                                    </ul>
+                                </div>
+                                <input type="hidden" name="phone_code" class="req-numeric" rel="phoneCodeCtr" value="">
+                            </div>
+                            <div class="warning-tooltip">
+                                <i class="small-arrow"></i>
+                                <span>Lütfen telefon kodunuzu seçiniz!</span>
+                            </div>
+                        </div>
+                        <div id="phoneNumberCtr">
+                            <input tabindex="6" type="text" name="phone_number" minlength="7" class="req-numeric req-min medium-input" rel="phoneNumberCtr" maxlength="7" />
+                            <div class="warning-tooltip">
+                                <i class="small-arrow"></i>
+                                <span>Lütfen telefon numaranızı giriniz!</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+                    <div id="mobilePhoneCtr" class="noMR">
+                        <label class="label">Cep Telefonu:</label>
+                        <div id="mobilePhoneCodeCtr">
+                            <div tabindex="7" class="global-customDropDown small-dd">
+                                <label class="global-dropDownLabel">
+                                    <span class="global-dropDownSpan">Seç</span>
+                                    <span class="arrow"></span>
+                                </label>
+                                <div class="hiddenDiv hidden">
+                                    <ul>
+                                        <li data-id="530">530</li>
+                                        <li data-id="531">531</li>
+                                        <li data-id="532">532</li>
+                                        <li data-id="533">533</li>
+                                        <li data-id="534">534</li>
+                                        <li data-id="535">535</li>
+                                        <li data-id="536">536</li>
+                                        <li data-id="537">537</li>
+                                        <li data-id="538">538</li>
+                                        <li data-id="539">539</li>
+                                        <li data-id="540">540</li>
+                                        <li data-id="541">541</li>
+                                        <li data-id="542">542</li>
+                                        <li data-id="543">543</li>
+                                        <li data-id="544">544</li>
+                                        <li data-id="545">545</li>
+                                        <li data-id="546">546</li>
+                                        <li data-id="547">547</li>
+                                        <li data-id="548">548</li>
+                                        <li data-id="549">549</li>
+                                        <li data-id="550">550</li>
+                                        <li data-id="505">505</li>
+                                        <li data-id="506">506</li>
+                                        <li data-id="507">507</li>
+                                        <li data-id="551">551</li>
+                                        <li data-id="552">552</li>
+                                        <li data-id="553">553</li>
+                                        <li data-id="554">554</li>
+                                        <li data-id="555">555</li>
+                                        <li data-id="556">556</li>
+                                        <li data-id="557">557</li>
+                                        <li data-id="558">558</li>
+                                        <li data-id="559">559</li>
+                                    </ul>
+                                </div>
+                                <input type="hidden" name="mobile_phone_code" class="req-numeric" rel="mobilePhoneCodeCtr" value="">
+                            </div>
+                            <div class="warning-tooltip">
+                                <i class="small-arrow"></i>
+                                <span>Lütfen cep telefonu kodunuzu seçiniz!</span>
+                            </div>
+                        </div>
+                        <div id="mobilePhoneNumberCtr">
+                            <input tabindex="9" type="text" minlength="7" name="mobile_phone_number" class="req-min req-numeric medium-input" rel="mobilePhoneNumberCtr" maxlength="7" />
+                            <div class="warning-tooltip">
+                                <i class="small-arrow"></i>
+                                <span>Lütfen cep telefonu numaranızı giriniz!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="cityDistrictWrap">
+                        <label class="label">Adres:</label>
+                        <div id="cityCtr">
+                            <!--<label class="label">İl:</label>-->
+                            <div tabindex="10" class="global-customDropDown medium-dd">
+                                <label class="global-dropDownLabel">
+                                    <span class="global-dropDownSpan">İl Seçiniz</span>
+                                    <span class="arrow"></span>
+                                </label>
+                                <div class="hiddenDiv hidden">
+                                    <ul>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                        <li data-name="İstanbul" data-id="1">İstanbul</li>
+                                    </ul>
+                                </div>
+                                <input type="hidden" name="city" class="req-string" rel="cityCtr" value="">
+                            </div>
+                            <div class="warning-tooltip">
+                                <i class="small-arrow"></i>
+                                <span>Lütfen il giriniz!</span>
+                            </div>
+
+                        </div>
+                        <div id="districtCtr" class="noMR">
+                            <!--<label class="label">İlçe:</label>-->
+                            <div tabindex="11" class="global-customDropDown medium-dd">
+                                <label class="global-dropDownLabel">
+                                    <span class="global-dropDownSpan">İlçe Seçiniz</span>
+                                    <span class="arrow"></span>
+                                </label>
+                                <div class="hiddenDiv hidden">
+                                    <ul>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                        <li data-name="Gaziosmanpaşa" data-id="1">Gaziosmanpaşa</li>
+                                    </ul>
+                                </div>
+                                <input type="hidden" name="district" class="req-string" rel="districtCtr" value="">
+                            </div>
+                            <div class="warning-tooltip">
+                                <i class="small-arrow"></i>
+                                <span>Lütfen ilçe seçiniz!</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div id="addressCtr">
+                        <label class="label"><br /></label>
+                        <textarea tabindex="12" name="address" rel="addressCtr" minlength="10" maxlength="500" class="req-string req-min textarea"></textarea>
+                        <div class="warning-tooltip">
+                            <i class="small-arrow"></i>
+                            <span>Lütfen adresinizi giriniz!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="messagesCtr">
+                        <label class="label">Mesajınız:</label>
+                        <textarea tabindex="13" name="messages" rel="messagesCtr" minlength="5" maxlength="500" class="req-string req-min textarea"></textarea>
+                        <div class="warning-tooltip">
+                            <i class="small-arrow"></i>
+                            <span>Lütfen mesajınızı giriniz!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label class="label"><br /></label>
+                    <div id="termsCtr" class="termofuse-box">
+                        <label tabindex="14" class="global-checkbox" for="termsCheck">
+                            <span class="ck"></span>
+                            <input id="termsCheck" rel="termsCtr" class="req-checked" type="checkbox" name="" value="0" />
+                            <a href="#" data-switch="1" class="mdl-btn termofuse" data-modal-id="1">Kullanım Koşullarını</a><span class="ke">okudum, kabul ediyorum.</span>
+                            <div class="warning-tooltip">
+                                <i class="small-arrow"></i>
+                                <span>Kullanım koşullarını okuyunuz!</span>
+                            </div>
+                        </label>
+                        <label tabindex="15" class="global-checkbox" for="eCheck">
+                            <span class="ck"></span>
+                            <input id="eCheck" type="checkbox" name="information" value="1" />
+                            <span>Manifakture kampanya ve gelişmelerinden haberdar olmak istiyorum.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label class="label"><br /></label>
+                    <input tabindex="16" type="submit" id="registerFormSubmit" class="submit-btn animated" value="GÖNDER"/>
+                </div>
+
+            </form>
+
+            </div>
+
+        <!-- Modals trigger buttons -->
+        <button class="mdl-btn " data-modal-id="1">Open Button</button>
+
+        <!--Start Popup-->
+        <div id="mainModal" class="visuallyhidden">
+
+            <div id="termofuseBox" data-modal-rel="1" class="modal visuallyhidden">
+                <button class="close-btn"></button>
+                <div class="modal-inner">
+                    <h3>KATILIM KOŞULLARI</h3>
+                    <ol class="scroll-this">
+                        <li><b>1.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                        <li><b>2.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                        <li><b>3.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                        <li><b>4.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                        <li><b>5.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                        <li><b>6.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                        <li><b>7.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                        <li><b>8.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                        <li><b>9.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                        <li><b>10.</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at cum labore laborum modi molestias necessitatibus nobis odio quidem sapiente?</li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+        <!--End Modal-->
+
+        <!--include script and FB division-->
+        <div id="fb-root"></div>
+        <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/jquery.mcustomscrollbar.js"></script>
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="js/jquery.numbermask.js"></script>
+        <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="js/global-form-validator.js"></script>
+        <script type="text/javascript" src="js/global-drop-down.js"></script>
+        <script type="text/javascript" src="js/main.js?v=0"></script>
+        <script>
+
+            $(document).ready(function(){
+
+                // global Framework
+                $.global();
+
+                // Project Initialize
+                PR.init();
+
+                window.fbAsyncInit = function(){
+
+                    // FB init
+                    FB.init({appId: '', status: true, cookie: true, xfbml: true, oauth: true });
+
+                    // Auto resize page tab
+                    FB.Canvas.setSize({width: $('body').width(), height: $('body').height()});
+
+                    // *** OPTIONAL *** If like button pressed, refresh page
+                    FB.Event.subscribe('edge.create', function(response) {
+
+                        console.log(response);
+                        //top.location = '<?=$jtrConfig['RedirectURL'].'&app_data='.json_encode($__AppData)?>';
+                    });
+
+                };
+            });
+
+            // Load the SDK asynchronously
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/tr_TR/all.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+        </script>
+    </body>
+</html>
+

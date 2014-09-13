@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Reklam PI</title>
+    <link rel="stylesheet" href="css/bootstrap.css?v=0">
+    <link rel="stylesheet" href="css/main.css?v=0">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic' rel='stylesheet' type='text/css'>
+</head>
+<body class="index">
+<div id="wrapper" class="cf">
+    <div id="header" class="cf">
+        <div class="top-bar cf">
+            <div class="container">
+                <div class="row cf">
+                    <div class="col-md-6">
+                        <div class="tel-content">
+                            <span class="tel-img">
+                                <img class="img-responsive" src="img/header-tel-icon.png" alt=""/>
+                            </span>
+                            <a class="tel-wr" href="tel:02122316522">0212 231 65 22</a>
+                        </div>
+                        <div class="mail-content hidden-xs">
+                            <span class="mail-img">
+                                <img class="img-responsive" src="img/header-email-icon.png" alt=""/>
+                            </span>
+                            <a class="mail-wr" href="mailto:info@reklampi.com" target="_top">info@reklampi.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="member-content">
+                            <a class="sign_up" href="#">
+                                <span class="write">Kayıt Ol</span>
+                                <span class="img">
+                                    <img class="img-responsive" src="img/header-register-icon.png" alt="" />
+                                </span>
+                            </a>
+                            <a class="sign_in" href="#">
+                                <span class="write">Üye Girişi</span>
+                                <span class="img">
+                                    <img class="img-responsive" src="img/header-sign-in-icon.png" alt="" />
+                                </span>
+                            </a>
+                            <!-- start sign ing popup -->
+                            <div class="sign-in-popup hidden">
+                                <span class="gray-area"></span>
+                                <div class="inner">
+                                    <form action="#" id="signInForm">
+                                        <div class="form-row">
+                                            <div id="emailCtr">
+                                                <label class="label">E-Mail:</label>
+                                                <input name="email" type="text" maxlength="50" class="req-email default-input" rel="emailCtr" autocomplete="off"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div id="passwordCtr">
+                                                <label class="label">Şifre:</label>
+                                                <input name="password" type="password" minlength="2" maxlength="50" class="req-min default-input" rel="passwordCtr" autocomplete="off"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div>
+                                                <a class="forget-my-password" href="#">Şifremi Unuttum</a>
+                                                <input type="submit" id="signInFormSubmit" value="Giriş Yap"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- finish sign ing popup -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar cf">
+            <div class="container">
+                <div class="row cf">
+                    <div class="col-md-4 col-sm-8 col-xs-8">
+                        <div class="logo-content">
+                            <a class="logo" href="index.html">
+                                <img class="img-responsive" src="img/global-logo.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-sm-4 col-xs-4">
+                        <div class="menu">
+                            <a class="menu-icon hidden-lg hidden-md" href="#">
+                                <img src="img/menu-icon.png" alt=""/>
+                            </a>
+                            <ul class="" id="dropdownMenu">
+                                <li><a href="index.html">Anasayfa</a></li>
+                                <li><a href="publisher.html">Yayıncı Ol</a></li>
+                                <li><a href="advertise.html">Reklam Ver</a></li>
+                                <li><a href="#">Hakkımızda</a></li>
+                                <li><a class="active" href="contact.html">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container" class="cf">
+        <div id="contactContainer" class="cf">
+            <div class="title cf">
+                <div class="container">
+                    <div class="row cf">
+                        <div class="col-md-12">
+                            <span class="img">
+                                <img class="img-responsive" src="img/contact-marker-icon.png" alt=""/>
+                            </span>
+                            <h3>İLETİŞİM</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row cf">
+                    <div class="col-md-8">
+                        <form id="registerForm" method="POST" action="#" class="cf">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="nameCtr">
+                                        <div class="row">
+                                            <label class="label">Ad Soyad:</label>
+                                        </div>
+                                        <div class="row">
+                                            <input tabindex="1" name="name" type="text" minlength="6" maxlength="40" class="req-letters req-min default-input" rel="nameCtr" autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="phoneNumberCtr">
+                                        <div class="row">
+                                            <label class="label">Telefon:</label>
+                                        </div>
+                                        <div class="row">
+                                            <input tabindex="2" type="text" name="phone_number" minlength="10" class="req-numeric req-min medium-input" rel="phoneNumberCtr" maxlength="10" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="e-mailCtr">
+                                        <div class="row">
+                                            <label class="label">E-Mail:</label>
+                                        </div>
+                                        <div class="row">
+                                            <input tabindex="3" name="email" type="text" maxlength="50" class="req-email default-input" rel="e-mailCtr" autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="subjectCtr">
+                                        <div class="row">
+                                            <label class="label">Konu:</label>
+                                        </div>
+                                        <div class="row">
+                                            <input tabindex="4" name="subject" type="text" minlength="3" maxlength="40" class="req-letters req-min default-input" rel="subjectCtr" autocomplete="off"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row large-input">
+                                <div class="col-md-12">
+                                    <div id="messagesCtr">
+                                        <div class="row">
+                                            <label class="label">Mesaj:</label>
+                                        </div>
+                                        <div class="row">
+                                            <textarea tabindex="5" name="messages" rel="messagesCtr" minlength="5" maxlength="500" class="req-string req-min textarea"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <input tabindex="6" type="submit" id="registerFormSubmit" class="submit-btn animated" value="GÖNDER"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="contact-content">
+                                <h4>İletişim Bilgisi</h4>
+                                <p>Aklınıza takılan herşey için bizi 7 gün 24 saat arayabilirsiniz. Deneyimli çalışanlarımız size en hızlı çözümü sunacaktır.</p>
+                                <div class="adress">
+                                    <div class="col-md-12">
+                                        <div class="img">
+                                            <img src="img/house-icon.png" alt=""/>
+                                        </div>
+                                        <p>Güzelyurt mah. 7. cad. Delta Plaza No: C3 B-1 Blok Kat:9 Daire:18 Esenyurt/İSTANBUL</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="img">
+                                            <img src="img/tel-no-icon.png" alt=""/>
+                                        </div>
+                                        <p>
+                                            <a href="tel:02122316522">0212 231 65 22</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="img">
+                                            <img src="img/email-icon.png" alt=""/>
+                                        </div>
+                                        <p>
+                                            <a href="mailto:info@reklampi.com" target="_top">info@reklampi.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="googleMap" class="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footerContainer" class="cf">
+        <div id="footerContent" class="cf">
+            <span class="cp hidden-xs"> ©2014. REKLAMPi. Tüm Hakları Saklıdır. </span>
+            <div class="ft-menu">
+                <a href="#">Yayıncı Ol</a>
+                <a href="advertise.html">Reklam Ver</a>
+                <a href="#">Hakkımızda</a>
+                <a href="contact.html">İletişim</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/jquery.mcustomscrollbar.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jquery.numbermask.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="js/global-form-validator.js"></script>
+<script type="text/javascript" src="js/global-drop-down.js"></script>
+<script type="text/javascript" src="js/responsive-slider.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+<script type="text/javascript" src="js/main.js?v=0"></script>
+</body>
+</html>
