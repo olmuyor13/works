@@ -67,6 +67,7 @@
 
 #securityCtr .row input { padding: 6px; }
 
+#header .member-content .img.exit { margin-top: 4px; }
 
 
 /* tab menu */
@@ -125,7 +126,9 @@
 
 
 
-
+@media (max-width: 1004px) {
+    #tabMenuList { width: 100%; margin-left: 0; }
+}
 
 
 
