@@ -29,16 +29,20 @@
 }
 
 .slider .item-title {
-    font: 55px 'Ubuntu',Arial;
+    font: 61px/71px 'helvetica_neueregular', Arial;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 36px;
     display: block;
+}
+
+.slider .item-title b {
+    font-size: 105px;
 }
 
 .slider .item-text {
     font: 25px 'milo_ottext', 'Ubuntu';
     color: white;
-    margin-bottom: 85px;
+    margin-bottom: 56px;
     display: block;
 }
 

@@ -36,7 +36,7 @@
 #contactContainer { background-color: #fff; }
 #contactContainer .title { border-top: 1px solid #d53a3a; border-bottom: 1px solid #d53a3a; }
 #contactContainer .title .img { margin: 16px 12px 16px 0; float: left; }
-#contactContainer .title h3   { float: left; margin-top: 22px; color: #494949; font: 22px 'Ubuntu'; }
+#contactContainer .title h3   { float: left; margin-top: 22px; color: #494949; font: 22px 'HelveticaNeueBold', 'Ubuntu'; }
 
 #contactContainer #registerForm { margin: 60px 0; padding: 30px; }
 #registerForm .row .col-md-12       { margin-bottom: 15px; }
@@ -49,17 +49,17 @@
 
 #contactContainer .contact-content { margin: 60px 0 0 0; padding: 30px; float: left; }
 #contactContainer .contact-content h4 { color: #494949; font: 22px 'Ubuntu'; margin-bottom: 20px; }
-#contactContainer .contact-content p  { color: #494949; font: 15px 'Ubuntu'; margin-bottom: 40px; }
+#contactContainer .contact-content p  { color: #494949; font: 15px/22px 'HelveticaNeueRegular', 'Ubuntu'; margin-bottom: 40px; }
 #contactContainer .contact-content .adress      { float: left; }
 #contactContainer .contact-content .adress .img { float: left; width: 14%; }
 #contactContainer .contact-content .adress p    { float: left; font-size: 14px; width: 86%; margin-bottom: 30px; }
-#contactContainer .contact-content .adress p a  { float: left; color: #494949; font: 15px 'Ubuntu'; }
+#contactContainer .contact-content .adress p a  { float: left; color: #494949; font: 15px 'HelveticaNeueRegular', 'Ubuntu'; }
 
 .map { float: left; width: 100%; height: 150px; }
 
 .about    { padding: 60px 15px; }
 .about h3 { color: #494949; font: 23px 'HelveticaNeueBold', 'Ubuntu'; }
-.about p  { color: #494949; font: 15px 'HelveticaNeueRegular', 'Ubuntu'; }
+.about p  { color: #494949; font: 15px/24px 'HelveticaNeueRegular', 'Ubuntu'; }
 
 .posr { position: relative; }
 #siteCtr .posr span { position: absolute; top: 2px; left: 8px; font-family: "Helvetica Neue", Arial, sans-serif;  font-size: 16px; }
