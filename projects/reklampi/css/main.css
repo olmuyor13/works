@@ -221,12 +221,12 @@ td.only-date b { font: 19px 'HelveticaNeueBold',Arial; }
 .result-success { background: #dedede; border-radius: 8px; text-align: center; margin-left: 15px;}
 .result-success p { font: 12px 'HelveticaNeueRegular',Arial; color: #373737;  padding: 5.5px 0;}
 
-
 .success-area { display: none; }
 .active.success-area { display: block !important; }
 
-
-
+/* User Data Form */
+#changeMyPasswordFormSubmit { background-color: #FFF; color:#494949; border: 1px solid #d0d0d0 }
+.second-form-title {  font: 18px 'Myriad Pro',Arial; margin-left: 15px; margin-bottom: 15px; }
 
 
 @media (max-width: 980px) {

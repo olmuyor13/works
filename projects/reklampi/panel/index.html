@@ -316,7 +316,140 @@
                             <!-- Kullanıcı Bilgileri -->
                             <div data-tab-index="2" class="tab-content-item user-data-content">
 
+                                <div class="col-md-6">
+                                    <form id="userDataForm" method="POST" action="#" class="generic-form-style cf">
+                                        <div class="row cf">
+                                            <div class="col-md-12">
+                                                <div id="userNameCtr">
+                                                    <div class="row">
+                                                        <label class="label">Kullanıcı Adı:</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <input tabindex="1" name="user_name" type="text" class="req-letters default-input" rel="userNameCtr" autocomplete="off"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         </div>
+                                        <div class="row cf">
+                                            <div class="col-md-12">
+                                                <div id="userEmailCtr">
+                                                    <div class="row">
+                                                        <label class="label">E-Mail:</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <input tabindex="2" type="text" name="user_email" maxlength="50" class="req-email medium-input" rel="userEmailCtr" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row cf">
+                                            <div class="col-md-12">
+                                                <div id="userFullNameCtr">
+                                                    <div class="row">
+                                                        <label class="label">Ad - Soyad:</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <input tabindex="3" name="user_fullname" type="text" minlength="5" maxlength="100" class="req-letters req-min default-input" rel="userFullNameCtr" autocomplete="off"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row cf">
+                                            <div class="col-md-12">
+                                                <div id="userPhoneNoCtr">
+                                                    <div class="row">
+                                                        <label class="label">Telefon Numarası:</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <input id="phoneNo" tabindex="4" name="user_phone_no" type="text" minlenth="11" maxlength="11" class="req-numeric req-min default-input" rel="userPhoneNoCtr" autocomplete="off"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row cf">
+                                            <div class="col-md-12">
+                                                <div id="cityCtr">
+                                                    <div class="row">
+                                                        <label class="label">Şehir</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <select tabindex="8" rel="cityCtr" class="form-control req-letters req-min default-input">Şehir Seçin...
+                                                            <option value="0">Adana</option>
+                                                            <option value="1">Adıyaman</option>
+                                                            <option value="2">Afyon</option>
+                                                            <option value="3">Ağrı</option>
+                                                            <option value="4">Amasya</option>
+                                                            <option value="5">Ankara</option>
+                                                            <option value="6">Antalya</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row cf">
+                                            <div class="col-md-6 pull-right ">
+                                                <input tabindex="7" type="submit" id="userDataFormSubmit" class="submit-btn animated" value="Güncelle"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
 
+                                <div class="col-md-6">
+
+                                    <h5 class="second-form-title">Şifre Değişikliği</h5>
+
+                                    <form id="changeMyPasswordForm" action="" class="cf generic-form-style">
+                                        <div class="row cf">
+                                            <div class="col-md-12">
+                                                <div id="currentPasswordCtr">
+                                                    <div class="row">
+                                                        <label class="label">Mevcut Şifreniz:</label>
+                                                    </div>
+                                                    <div class="row">
+                                                        <input tabindex="1" name="current_password" type="password" minlength="6" maxlength="150" class="req-string req-min no-space form-control" rel="currentPasswordCtr" autocomplete="off">                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div id="newPasswordCtr">
+
+                                            <div class="row cf">
+                                                <div class="col-md-12">
+                                                    <div>
+                                                        <div class="row">
+                                                            <label class="label">Yeni Şifreniz:</label>
+                                                        </div>
+                                                        <div class="row">
+                                                            <input tabindex="2" name="new_password" type="password" minlength="6" maxlength="150" class="req-same req-min req-string no-space form-control" rel="newPasswordCtr" autocomplete="off">                                                </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row cf">
+                                                <div class="col-md-12">
+                                                    <div id="newPasswordAgainCtr">
+                                                        <div class="row">
+                                                            <label class="label">Yeni Şifreniz Tekrar:</label>
+                                                        </div>
+                                                        <div class="row">
+                                                            <input tabindex="3" name="new_password_again" type="password" minlength="6" maxlength="150" class="req-same req-min req-string no-space form-control" rel="newPasswordCtr" autocomplete="off">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="row cf">
+                                            <div class="col-md-6 pull-right ">
+                                                <input tabindex="7" type="submit" id="changeMyPasswordFormSubmit" class="submit-btn animated" value="Değiştir"/>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                </div>
 
                             </div>
 

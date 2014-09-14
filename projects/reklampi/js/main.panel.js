@@ -12,7 +12,11 @@ var PNL = {
 
         init: function(){
 
+            // IBAN mask
             $("#ibanNo").mask("TR99 9999 9999 9999 9999 9999 99",{placeholder:" "});
+
+            // Phone mask
+            $('#phoneNo').mask("0(999) 999 99 99", { placeholder : '-' });
 
             PNL.General.FormValidator.init();
         },
@@ -21,17 +25,42 @@ var PNL = {
 
             init: function(){
 
-
-                // If you want to use shake or slideOutRight class, you must to include fe-framework/css/animated.min.css
+                // Bank Data Form
                 $('#bankDataFormSubmit').formValidator({
                     scope: '#bankDataForm',
                     onError: function(){
                     },
                     onSuccess: function(){
                         // var serializeData = $('#bankDataForm').serialize();
+                        // Ajax in there.
                         return false;
                     }
                 });
+
+                // User Data Form
+                $('#userDataFormSubmit').formValidator({
+                    scope: '#userDataForm',
+                    onError: function(){
+                    },
+                    onSuccess: function(){
+                        // var serializeData = $('#userDataForm').serialize();
+                        // Ajax in there.
+                        return false;
+                    }
+                });
+
+                // Change Password Form
+                $('#changeMyPasswordFormSubmit').formValidator({
+                    scope: '#changeMyPasswordForm',
+                    onError: function(){
+                    },
+                    onSuccess: function(){
+                        // var serializeData = $('#changePasswordForm').serialize();
+                        // Ajax in there.
+                        return false;
+                    }
+                });
+
             }
 
         }

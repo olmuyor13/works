@@ -36,6 +36,16 @@ var PR = {
 
             PR.General.DropdownMenu.init();
 
+
+            // // You don't press "space" key.
+            $('.no-space').keyup(function(e) {
+                if (e.keyCode == 32)
+                    return false;
+            }).keydown(function(e) {
+                    if (e.keyCode == 32)
+                        return false;
+                });
+
         },
 
         Popup: {
