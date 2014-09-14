@@ -4,6 +4,7 @@ var PNL = {
 
         PNL.General.init();
         PNL.Tab.init();
+        PNL.ApprovedAction.init();
 
     },
 
@@ -33,6 +34,20 @@ var PNL = {
                 });
             }
 
+        }
+
+    },
+
+    ApprovedAction: {
+
+        init: function(){
+            $('#bankDataApprovedBtn').on('click',PNL.ApprovedAction.success);
+        },
+
+        success: function(){
+            $('.bank-data-content .approved-row').remove();
+            $('.bank-data-content .success-area').addClass('active');
+            return false;
         }
 
     },

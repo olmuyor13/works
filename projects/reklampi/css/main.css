@@ -208,12 +208,26 @@ td.only-date b { font: 19px 'HelveticaNeueBold',Arial; }
 
 
 /* Bank Data Form */
-#bankDataApprovedBtn { height: 39px; display: inline-block; border: 1px solid #d0d0d0; border-radius: 5px; clear: both;
-    padding: 4px 43.5px; color: #d53a3a; font: 15px/30px 'HelveticaNeueBold',Arial; border-radius: 10px; }
+#bankDataApprovedBtn { height: 39px; display: inline-block; border: 1px solid #d0d0d0;  clear: both;
+    padding: 4px 43.5px; color: #d53a3a; font: 15px/30px 'HelveticaNeueBold',Arial; border-radius: 10px; background: #fff; margin-left: 15px;}
 #bankDataApprovedBtn:hover { color: #FFF; background: #d53a3a; }
+
+.text-approved-btn { height: 39px; display: block; border: 1px solid #d0d0d0;
+    padding: 4px 43.5px; color: #fff; font: 15px/30px 'HelveticaNeueBold',Arial; border-radius: 10px; background: #66d53a; margin-left: -15px; float: left;}
 
 #bankDataFormSubmit { font: 18px 'HelveticaNeueBold',Arial; }
 #bankDataFormSubmit:hover { opacity: 0.7 }
+
+.result-success { background: #dedede; border-radius: 8px; text-align: center; margin-left: 15px;}
+.result-success p { font: 12px 'HelveticaNeueRegular',Arial; color: #373737;  padding: 5.5px 0;}
+
+
+.success-area { display: none; }
+.active.success-area { display: block !important; }
+
+
+
+
 
 @media (max-width: 980px) {
 
@@ -238,6 +252,9 @@ td.only-date b { font: 19px 'HelveticaNeueBold',Arial; }
 
     .help-center-content { text-align: center; }
     .help-center-content .new-support-request-btn { float: none; }
+
+    .col-md-3.z1 { margin-left: 0; text-align: center; }
+    .text-approved-btn { float: none; display: inline-block; }
 
 }
 
@@ -380,6 +397,7 @@ td.only-date b { font: 19px 'HelveticaNeueBold',Arial; }
    Helper classes
    ========================================================================== */
 
+.z1 { z-index: 1; margin-left: -15px;}
 .disabled {
     cursor: not-allowed;
     pointer-events: none;

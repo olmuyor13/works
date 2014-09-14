@@ -21,9 +21,6 @@ var PR = {
             // Placeholder this is IE 7 and higher
             $('input, textarea').placeholder();
 
-            // Input NumberMask this is IE 7 and higher
-            $('input[rel="phoneNumberCtr"], input[rel="mobilePhoneNumberCtr"]').numberMask({ beforePoint: 7 });
-
             // Input Mask this is IE 8 and higher
             //$('#_phone').mask("0(599) 999 99 99", { placeholder : '-' });
 
@@ -154,6 +151,11 @@ var PR = {
                   $(this).siblings("span.ck").addClass("active");
                   $.event.trigger('radiobutton-change', [$(this)]);
               });
+
+
+              // filters
+              $('.filter-letters, .req-letters').filterCustom({regex:'[ Ã–Ã¶Ã‡Ã§Ä°Ä±ÄŸÃœÃ¼ÅÅŸa-zA-Z]', live: true});
+              $('.filter-numeric, .req-numeric').filterCustom({regex:/(^-?\d\d*\.\d*$)|(^-?\d\d*$)|(^-?\.\d\d*$)|(^-?\d*$)/, live: true});
 
           }
 

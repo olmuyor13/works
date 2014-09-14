@@ -6,7 +6,7 @@
     <title>Panel | Anasayfa</title>
     <link rel="stylesheet" href="../css/bootstrap.css?v=0">
     <link rel="stylesheet" href="../css/main.css?v=0">
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700,400italic' rel='stylesheet' type='text/css'>-->
 </head>
 <body class="index">
 <div id="wrapper" class="cf">
@@ -369,7 +369,7 @@
                                                     <label class="label">Hesap Sahibi:</label>
                                                 </div>
                                                 <div class="row">
-                                                    <input tabindex="2" type="text" name="account_holder" class="req-letters medium-input" rel="accountHolderCtr" maxlength="10" />
+                                                    <input tabindex="2" type="text" name="account_holder" maxlength="50" class="req-letters medium-input" rel="accountHolderCtr" />
                                                 </div>
                                             </div>
                                         </div>
@@ -393,7 +393,7 @@
                                                     <label class="label">Şube Kodu:</label>
                                                 </div>
                                                 <div class="row">
-                                                    <input tabindex="4" name="branch_code" type="text" maxlength="40" class="req-letters default-input" rel="branchCodeCtr" autocomplete="off"/>
+                                                    <input tabindex="4" name="branch_code" type="text" minlenth="4" maxlength="4" class="req-numeric req-min default-input" rel="branchCodeCtr" autocomplete="off"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -405,7 +405,7 @@
                                                     <label class="label">Hesap Numarası:</label>
                                                 </div>
                                                 <div class="row">
-                                                    <input tabindex="5" name="account_number" type="text" maxlength="40" class="req-numeric default-input" rel="accountNumberCtr" autocomplete="off"/>
+                                                    <input tabindex="5" name="account_number" type="text" minlegnth="6" maxlength="10" class="req-numeric req-min default-input" rel="accountNumberCtr" autocomplete="off"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -424,15 +424,23 @@
                                         </div>
                                     </div>
 
-                                    <div class="row cf">
-                                        <div class="col-md-3">
+                                    <div class="row cf approved-row">
+                                        <div class="col-md-3 z1">
                                             <a href="#" tabindex="6" id="bankDataApprovedBtn" class="">ONAYLA</a>
-
                                         </div>
-                                        <div class="col-md-9 result-success">
 
+                                    </div>
+
+                                    <div class="row cf success-area">
+                                        <div class="col-md-9 result-success">
+                                            <p>Hesap bilgilerimi doğru girdiğimi onaylıyor ve bu forma girilmiş bilgilerden kaynaklanacak yanlış
+                                                hesaba ödeme yapılması durumunda sorumluluğun tarafıma ait olduğunu kabul ediyorum.</p>
+                                        </div>
+                                        <div class="col-md-3 z1">
+                                            <span class="text-approved-btn">ONAYLANDI</span>
                                         </div>
                                     </div>
+
 
                                     <div class="row">
                                         <div class="col-md-3">
@@ -846,7 +854,7 @@
     <script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
     <script type="text/javascript" src="../js/jquery.mcustomscrollbar.js"></script>
     <script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
-    <script type="text/javascript" src="../js/jquery.numbermask.js"></script>
+    <script type="text/javascript" src="../js/jquery.filter.js"></script>
     <script type="text/javascript" src="../js/jquery.placeholder.js"></script>
     <script type="text/javascript" src="../js/trCharacters.js"></script>
     <script type="text/javascript" src="../js/global-form-validator.js"></script>
