@@ -36,7 +36,7 @@
 #contactContainer { background-color: #fff; }
 #contactContainer .title { border-top: 1px solid #d53a3a; border-bottom: 1px solid #d53a3a; }
 #contactContainer .title .img { margin: 16px 12px 16px 0; float: left; }
-#contactContainer .title h3   { float: left; margin-top: 22px; color: #494949; font: 22px 'HelveticaNeueBold', 'Ubuntu'; }
+#contactContainer .title h3   { float: left; margin-top: 22px; color: #494949; font: bold 22px 'Myriad Pro', 'Ubuntu'; }
 
 #contactContainer #registerForm { margin: 60px 0; padding: 30px; }
 #registerForm .row .col-md-12       { margin-bottom: 15px; }

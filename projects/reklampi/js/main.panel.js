@@ -88,10 +88,8 @@ var PNL = {
             $('#tabMenu .tab-menu-item:first').addClass('active');
             $('#tabMenu .tab-menu-item').on('click',PNL.Tab.open);
 
-//            $('#tabContent .tab-content-item:first').addClass('active');
-//            $('#tabContent .tab-content-item:first').fadeIn();
-
-            $('.tab-content-item.bank-data-content').fadeIn();
+            $('#tabContent .tab-content-item:first').addClass('active');
+            $('#tabContent .tab-content-item:first').fadeIn();
 
         },
 
