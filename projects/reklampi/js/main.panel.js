@@ -11,6 +11,9 @@ var PNL = {
 
         init: function(){
 
+            $("#ibanNo").mask("TR99 9999 9999 9999 9999 9999 99",{placeholder:" "});
+
+            PNL.General.FormValidator.init();
         },
 
         FormValidator: {
@@ -19,14 +22,13 @@ var PNL = {
 
 
                 // If you want to use shake or slideOutRight class, you must to include fe-framework/css/animated.min.css
-                $('#registerFormSubmit').formValidator({
-                    scope: '#registerForm',
+                $('#bankDataFormSubmit').formValidator({
+                    scope: '#bankDataForm',
                     onError: function(){
-                        PNL.General.FormValidator.addShake('#registerFormSubmit');
                     },
                     onSuccess: function(){
-                        // var serializeData = $('#registerForm').serialize();
-                        PNL.General.FormValidator.submitForm('#registerForm','#registerFormSubmit');
+                        // var serializeData = $('#bankDataForm').serialize();
+                        return false;
                     }
                 });
             }
@@ -42,10 +44,10 @@ var PNL = {
             $('#tabMenu .tab-menu-item:first').addClass('active');
             $('#tabMenu .tab-menu-item').on('click',PNL.Tab.open);
 
-            $('#tabContent .tab-content-item:first').addClass('active');
-            $('#tabContent .tab-content-item:first').fadeIn();
-//
-//            $('.tab-content-item.statistics-content').fadeIn();
+//            $('#tabContent .tab-content-item:first').addClass('active');
+//            $('#tabContent .tab-content-item:first').fadeIn();
+
+            $('.tab-content-item.bank-data-content').fadeIn();
 
         },
 
