@@ -1,23 +1,18 @@
-#sliderContainer { width: 1000px; height: 370px; max-height: 370px; }
-.slider { overflow: hidden; position: relative; }
-.slider ul.slider_liste li { width: 100%; float: left }
-.slider ul.slider_liste li img { width: 100% }
+#sliderContainer { width: 1000px; height: 370px;}
+.slider { width: 1000px; overflow: hidden; position: relative; height: 370px;}
+.slider ul.slider_liste li { width: 100%; float: left;  height: 370px; }
+.slider ul.slider_liste li img { width: 100%; display: block; }
 
 /* buton */
 a.prev, a.next {
-    width: 70px;
-    height: 70px;
-    text-decoration: none;
-    font: 32px/70px Arial;
-    color: #fff;
-    border-radius: 100px;
+    width: 21px;
+    height: 21px;
     position: absolute;
-    top: 50%;
-    margin-top: -35px;
-    background: rgba(0, 0, 0, .5);
+    bottom: 7px;
+    background: url(../img/slider-arrow.png);
     text-align: center;
     z-index: 2;
 }
-a.prev { left: 20px }
-a.next { right: 20px }
-a.prev:hover, a.next:hover { background: #000 }
+a.prev { right: 31px }
+a.next { right: 8px; background-position: right top; }
+a.prev:hover, a.next:hover { opacity: 0.8 }

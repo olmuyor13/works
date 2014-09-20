@@ -23,9 +23,11 @@ var PR = {
 
             PR.General.Popup.init();
 
-            //PR.General.Maps.init();
+            PR.General.Maps.init();
 
             PR.General.DropdownMenu.init();
+
+            PR.General.Accordion.init();
 
 
             // // You don't press "space" key.
@@ -44,30 +46,23 @@ var PR = {
             status : true,
 
             init: function(){
-
-                // Tablet and Mobile
-                if ($('body').width() < 1024){
-                    PR.General.Popup.rollover();
-                    PR.General.Popup.hoverOnBox();
-                // Desktop
-                } else {
-                    $('.sign_in').on('click',PR.General.Popup.toggle);
-                }
-
+                PR.General.Popup.rollover();
+                PR.General.Popup.hoverOnBox();
+                PR.General.Popup.products();
             },
 
             rollover: function(){
-                $('.sign_in').hover(function(){
-                    $('.sign-in-popup').removeClass('hidden');
+                $('a.products').hover(function(){
+                    $('.product-submenu').removeClass('hidden');
                 }, function(){
 
                     setTimeout(function(){
                         if (PR.General.Popup.hoverOnBox()) {
-                            $('.sign-in-popup').removeClass('hidden');
+                            $('.product-submenu').removeClass('hidden');
                         } else {
-                            $('.sign-in-popup').addClass('hidden');
+                            $('.product-submenu').addClass('hidden');
                         }
-                    },600);
+                    },1000);
 
 
                 });
@@ -75,12 +70,14 @@ var PR = {
 
             hoverOnBox: function(){
 
-                $('.sign-in-popup').hover(function(){
-                    $('.sign-in-popup').removeClass('hidden');
+                $('.product-submenu').hover(function(){
+                    $('.product-submenu').removeClass('hidden');
                     PR.General.Popup.status = true;
 
                 }, function(){
-                    $('.sign-in-popup').addClass('hidden');
+                    $('.product-submenu').addClass('hidden');
+                    var default_src = $('img.product-cat-visual').attr('data-default-src');
+                  $('img.product-cat-visual').attr('src',default_src);
                     PR.General.Popup.status = false;
                 });
 
@@ -88,71 +85,31 @@ var PR = {
 
             },
 
-            toggle: function(){
-                $('.sign-in-popup').toggleClass('hidden');
-                return false;
+            products: function(){
+
+                $('.submenu-title-wrap .submenu-item').hover(function(){
+
+                    var th = $(this);
+                    var src = th.attr('data-img-src');
+
+                    $('img.product-cat-visual').attr('src',src);
+
+                }, function(){
+
+                  
+
+                });
+
+
             }
+
+
 
         },
 
         FormElements: {
 
           init: function(){
-
-
-              // custom checkbox
-              /*
-               *
-               * Sample usage - HTML:
-               *
-               * <label for="privacyCheck" class="global-checkbox">
-               *     <input type="checkbox" name="privacyCheck" id="privacyCheck" value="1" checked="checked" />
-               *     <span class="ck"></span>
-               * </label>
-               *
-               * Sample usage - CSS:
-               *
-               * label.global-checkbox input          { position: absolute; top: 0; left: 0; opacity: 0; cursor: pointer; }
-               * label.global-checkbox span.ck        { cursor:pointer; display: inline-block; width: 16px; height: 16px; background: url("../i/bg-checkbox.png") no-repeat 0 -16px; margin-right: 10px; position: relative; line-height: 25px; }
-               * label.global-checkbox span.ck.active { background-position: 0 0; }
-               *
-               */
-              $("label.global-checkbox input[type='checkbox']:checked").siblings("span.ck").addClass("active");
-              $("label.global-checkbox input[type='checkbox']").bind('click',function() { $(this).siblings("span.ck").toggleClass("active"); $.event.trigger('checkbox-change', [$(this)]); });
-
-              // custom radiobutton
-              /*
-               *
-               * Sample usage - HTML:
-               *
-               * <div class="genderChoose">
-               *     <label for="imMan" class="global-radiobutton">
-               *         <span class="ck"></span>
-               *         <input type="radio" name="gender" id="imMan" value="Man" checked />
-               *         <span>Man</span>
-               *     </label>
-               *
-               *     <label for="imWoman" class="global-radiobutton">
-               *         <span class="ck"></span>
-               *         <input type="radio" name="gender" id="imWoman" value="Woman" />
-               *         <span>Woman</span>
-               *     </label>
-               *</div>
-               *
-               * Sample usage - CSS:
-               *
-               * label.global-radiobutton input          { position: absolute; top: 0; left: 0; opacity: 0; cursor: pointer; }
-               * label.global-radiobutton span.ck        { cursor:pointer; display: inline-block; width: 16px; height: 16px; background: url("../i/bg-radiobutton.png") no-repeat 0 -16px; margin-right: 10px; position: relative; line-height: 25px; }
-               * label.global-radiobutton span.ck.active { background-position: 0 0; }
-               *
-               */
-              $("label.global-radiobutton input[type='radio']:checked").siblings("span.ck").addClass("active");
-              $("label.global-radiobutton input[type='radio']").bind('click',function() {
-                  $(this).parent().siblings('label.global-radiobutton').find('span.ck').removeClass('active');
-                  $(this).siblings("span.ck").addClass("active");
-                  $.event.trigger('radiobutton-change', [$(this)]);
-              });
-
 
               // filters
               $('.filter-letters, .req-letters').filterCustom({regex:'[ Ã–Ã¶Ã‡Ã§Ä°Ä±ÄŸÃœÃ¼ÅÅŸa-zA-Z]', live: true});
@@ -162,17 +119,62 @@ var PR = {
 
         },
 
+        validateEmail: function(email){
+
+          var emailReg = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+          var valid = emailReg.test(email);
+
+          if(!valid) {
+                return false;
+            } else {
+              return true;
+            }
+        },
+
 
         FormValidator: {
 
             init: function(){
 
-                $('#signInFormSubmit').formValidator({
-                    scope: '#signInForm',
+                $('#searchFormSubmit').formValidator({
+                    scope: '#searchForm',
                     onError: function(){
                     },
                     onSuccess: function(){
-                        // var serializeData = $('#registerForm').serialize();
+                        // var serializeData = $('#searchForm').serialize();
+                    }
+                });
+
+
+                 $('#footer_contactUsFormSubmit').formValidator({
+                    scope: '#footer_contactUsForm',
+                    onError: function(){
+                    },
+                    extraBool: function(){
+
+                        var result = true;
+
+                        if ($('.ebulten-input').val().length > 0){
+
+                          var email = $('.ebulten-input').val();
+
+                          if (!PR.General.validateEmail(email)){
+                             $('.eBultenBox').addClass('error-input');
+                             $('.ebulten-input').addClass('req-email');
+                              result = false;
+                          }
+                          
+                        } else {
+                          $('.eBultenBox').removeClass('error-input');
+                          $('.ebulten-input').removeClass('req-email');
+                        }
+
+                        return result;
+
+                    },
+                    onSuccess: function(){
+                        // var serializeData = $('#footer_contactUsForm').serialize();
+                        alert('Oldu');
                     }
                 });
 
@@ -240,6 +242,72 @@ var PR = {
                     return false;
                 });
             }
+
+        },
+
+        Accordion: {
+
+          init: function(){
+            $('.accordion-wrapper .acc-item').on('click',PR.General.Accordion.firstLevelOpen);
+            $('.acc-inner-content > li > a').on('click',PR.General.Accordion.secondLevelOpen);
+          },
+
+          firstLevelOpen: function(){
+
+            var th = $(this);
+            var result = false;
+
+            // Tıklanana atcive atar, kardeşlerinden siler.
+            th.addClass('active').siblings().removeClass('active');
+
+            $('ul.second-level').slideUp();
+
+            // Tıklanan item'ın yanında ul varsa, alt menüsü var demektir.
+            if (th.next('ul.acc-inner-content').length) {
+
+                if (!th.next('ul.acc-inner-content').is(':visible')){
+                   // alt menü açılır.
+                  th.next('ul.acc-inner-content').slideDown();
+                } else {
+                  th.next('ul.acc-inner-content').slideUp();
+                }
+
+            } else {
+              result = true;
+            }
+
+            return result;
+
+            
+          },
+
+           secondLevelOpen: function(){
+
+            var th = $(this);
+            var result = false;
+
+            // Tıklanan item'ın yanında ul varsa, alt menüsü var demektir.
+            if (th.next('ul.second-level').length) {
+
+              if (!th.next('ul.second-level').is(':visible')){
+                // alt menü açılır.
+                th.next('ul.second-level').slideDown();
+                th.addClass('active').parent().siblings().find('a').removeClass('active');
+
+              } else {
+                 th.next('ul.second-level').slideUp();
+                  $('.acc-inner-content > li > a').removeClass('active');
+              }
+
+            } else {
+              result = true;
+            }
+
+            return result;
+
+           
+          }
+
 
         }
 

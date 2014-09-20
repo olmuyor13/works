@@ -3,7 +3,7 @@ $(function(){
 	var slider = $('.slider'),
 		list = slider.find('ul.slider_liste'),
 		length = list.find('li').length,
-		width = slider.outerWidth(),
+		width = slider.width(),
 		totalWidth = width * length,
 		index = 0,
 		next = $('a.next', slider),
