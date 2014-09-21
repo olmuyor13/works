@@ -29,6 +29,14 @@ var PR = {
 
             PR.General.Accordion.init();
 
+            PR.General.Tab.init();
+
+            
+
+            //Colorbox
+            //Examples of how to assign the Colorbox event to elements
+            $("#tabContainer .colorbox-item").colorbox({rel:'colorbox-item'});
+
 
             // // You don't press "space" key.
             $('.no-space').keyup(function(e) {
@@ -40,6 +48,7 @@ var PR = {
                 });
 
         },
+
 
         Popup: {
 
@@ -136,6 +145,7 @@ var PR = {
 
             init: function(){
 
+                // Global Search Form
                 $('#searchFormSubmit').formValidator({
                     scope: '#searchForm',
                     onError: function(){
@@ -146,7 +156,8 @@ var PR = {
                 });
 
 
-                 $('#footer_contactUsFormSubmit').formValidator({
+                // Footer - Contact Form
+                $('#footer_contactUsFormSubmit').formValidator({
                     scope: '#footer_contactUsForm',
                     onError: function(){
                     },
@@ -178,7 +189,41 @@ var PR = {
                     }
                 });
 
+
+                // Contact Page Form
+                $('#contactFormSubmit').formValidator({
+                    scope: '#contactForm',
+                    onError: function(){
+                    },
+                    onSuccess: function(){
+                        // var serializeData = $('#contactForm').serialize();
+                    }
+                });
+
+
+
+
+
             }
+
+        },
+
+        Tab: { 
+
+            init: function(){
+                $('.another-img-list a.tab-item').on('click',PR.General.Tab.open);
+            },
+
+            open: function(){
+
+                var th = $(this);
+                var src = th.attr('data-src');
+
+                $('#tabContainer #visibleVisual').attr('src',src);
+
+                return false;
+            }
+
 
         },
 
