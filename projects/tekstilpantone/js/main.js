@@ -216,10 +216,13 @@ var PR = {
 
             open: function(){
 
-                var th = $(this);
-                var src = th.attr('data-src');
+                var th      = $(this);
+                var src     = th.attr('data-src');
+                var index   = th.attr('data-index');
 
-                $('#tabContainer #visibleVisual').attr('src',src);
+                $('#tabContainer .colorbox-item').removeClass('active');
+                $('#tabContainer .colorbox-item[data-index='+index+']').addClass('active');
+                $('#tabContainer .colorbox-item.active img').attr('src',src);
 
                 return false;
             }
